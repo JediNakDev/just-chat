@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="background">
+        {% if status!=0 %}
+        <div class="error">
+            {% if status==1 %}
+            <div class="error-text">Your password is too short( the minimum is 8 ). Please try another password.</div>
+            {% endif %}
+            {% if status==2 %}
+            <div class="error-text">The password is different from the confirm password. Please try again.</div>
+            {% endif %}
+            {% if status==3 %}
+            <div class="error-text">This username already used. Please try another username.</div>
+            {% endif %}
+        </div>
+        {% endif %}
+        <div class="glass">
+            <h1>Register</h1>
+            <form action="" method="post">
+                <h2>Username</h2>
+                {% if status!=3 %}
+                <input type="text"  name="username" required value={{ username }}><br>
+                {% endif %}
+                {% if status==3 %}
+                <input type="text"  name="username" required><br>
+                {% endif %}
+                <h2>Password</h2>
+                <input type="password" name="password" id=""><br>
+                <h2>Confirm password</h2>
+                <input type="password" name="confirmedpassword" id=""><br>
+                <input type="submit" value="Register" class="register">
+            </form>
+            <h6>Already had an account? <a href={{ url_for('views.login') }}>Login</a></h6>
+        </div>
+    </div>
+</body>
+</html>

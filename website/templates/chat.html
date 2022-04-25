@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ username }}</title>
+    <link rel="stylesheet" href="../static/css/chat.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../static/js/chat.js"></script>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="pop-up-add-cover" id="pop-up-add-cover">
+        <div class="pop-up-add-background" id="pop-up-add-background" onclick="closePopup()"></div>
+        <div class="pop-up-add" id="pop-up-add">
+        <form action="" method="post" name="chat-add" id="chat-add" class="chat-add" autocomplete="off" oninput="displayImage()">          
+          <input type="text" autocomplete="false" class="hide">
+          <div class="chat-profile-show-background"></div>
+          <img src="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg" alt="" id="chat-profile-show" class="chat-profile-show"><br>
+          <input type="text" name="chat-name-add" class="chat-name-add" id="chat-name-add" required>
+          <div class="chat-profile-choice">
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg" checked>
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricSquare.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricSquare.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricTriangle.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricTriangle.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricPentagon.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricPentagon.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricPolygon.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricPolygon.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceFavoriteHeart.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceFavoriteHeart.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceBookmark.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceBookmark.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfacePageControllerSettings.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfacePageControllerSettings.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceWeatherWindmill.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceWeatherWindmill.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceContentFire.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentFire.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPen5.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen5.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPen4.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen4.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPen6.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen6.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceContentBook3.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentBook3.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceContentBookEdit.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentBookEdit.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarMark.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarMark.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarNote.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarNote.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarWarning.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarWarning.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarHeart.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarHeart.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarFavorite.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarFavorite.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPaint.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPaint.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/ShoppingGift.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/ShoppingGift.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/CatergoriesBall.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/CatergoriesBall.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/EntertainmentMusicNote2.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/EntertainmentMusicNote2.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/PhoneModeAirplane.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/PhoneModeAirplane.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceHome5.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceHome5.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/MoneyCashDollarCoin.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/MoneyCashDollarCoin.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditMagicWand.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditMagicWand.svG">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/CatergoriesRing.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/CatergoriesRing.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodCake.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodCake.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodDrinksTeaCup.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodDrinksTeaCup.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodBurger.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodBurger.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodWaterMelon.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodWaterMelon.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodIceCream1.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodIceCream1.svg">
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceSettingMenuHorizontalCircle.svg" alt="" class="chat-profile-add-pic">
+              <input type="radio" class="chat-profile-add" name="chat-profile-add" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceSettingMenuHorizontalCircle.svg">
+            </div>
+          </div>
+          <div class="right">
+            <span class="close-pop-up" id="close-pop-up" onclick="closePopup()">Cancel</span>
+            <input type="submit" value="Confirm" class="confirm-add">
+            <input type="text" name="type" value="add" class="hide">
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="pop-up-add-cover" id="pop-up-setting-cover">
+        <div class="pop-up-add-background" id="pop-up-setting-background" onclick="closeSetting()"></div>
+        <div class="pop-up-add" id="pop-up-setting">
+        <form action="" method="post" name="chat-setting" id="chat-setting" class="chat-add" autocomplete="off" oninput="displayImageSetting()">          
+          <input type="text" autocomplete="false" class="hide">
+          <input type="text" name="currentchat" id="currentchat" class="hide" value="1">
+          <div class="chat-profile-show-background"></div>
+          <img src="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg" alt="" id="chat-profile-show-setting" class="chat-profile-show"><br>
+          <input type="text" name="chat-name-add" class="chat-name-add" id="chat-name-add" value={{ userdb['chats'][currentchat]['name'] }} required>
+          <input type="text" value={{ userdb['chats'][currentchat]['img'] }} name="chat-setting-img" class="hide">
+          <div class="chat-profile-choice">
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricCircle.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricSquare.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceGeometricSquare.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricSquare.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricSquare.svg">
+              {% endif %}</div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricTriangle.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceGeometricTriangle.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricTriangle.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricTriangle.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricPentagon.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceGeometricPentagon.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricPentagon.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricPentagon.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceGeometricPolygon.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceGeometricPolygon.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricPolygon.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceGeometricPolygon.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceFavoriteHeart.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceFavoriteHeart.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceFavoriteHeart.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceFavoriteHeart.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceBookmark.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceBookmark.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceBookmark.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceBookmark.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfacePageControllerSettings.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfacePageControllerSettings.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfacePageControllerSettings.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfacePageControllerSettings.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceWeatherWindmill.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceWeatherWindmill.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceWeatherWindmill.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceWeatherWindmill.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceContentFire.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceContentFire.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentFire.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentFire.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPen5.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceEditPen5.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen5.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen5.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPen4.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceEditPen4.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen4.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen4.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPen6.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceEditPen6.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen6.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPen6.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceContentBook3.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceContentBook3.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentBook3.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentBook3.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceContentBookEdit.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceContentBookEdit.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentBookEdit.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceContentBookEdit.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarMark.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceCalendarMark.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarMark.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarMark.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarNote.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceCalendarNote.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarNote.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarNote.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarWarning.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceCalendarWarning.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarWarning.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarWarning.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarHeart.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceCalendarHeart.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarHeart.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarHeart.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceCalendarFavorite.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceCalendarFavorite.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarFavorite.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceCalendarFavorite.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditPaint.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/InterfaceEditPaint.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPaint.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditPaint.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/ShoppingGift.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/ShoppingGift.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/ShoppingGift.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/ShoppingGift.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/CatergoriesBall.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/CatergoriesBall.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/CatergoriesBall.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/CatergoriesBall.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/EntertainmentMusicNote2.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/EntertainmentMusicNote2.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/EntertainmentMusicNote2.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/EntertainmentMusicNote2.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/PhoneModeAirplane.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/PhoneModeAirplane.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/PhoneModeAirplane.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/PhoneModeAirplane.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceHome5.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceHome5.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceHome5.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceHome5.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/MoneyCashDollarCoin.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']== "../static/img/chat-page/profile-pic/MoneyCashDollarCoin.svg" %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/MoneyCashDollarCoin.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/MoneyCashDollarCoin.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceEditMagicWand.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceEditMagicWand.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditMagicWand.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceEditMagicWand.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/CatergoriesRing.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/CatergoriesRing.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/CatergoriesRing.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/CatergoriesRing.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodCake.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/FoodCake.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodCake.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodCake.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodDrinksTeaCup.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/FoodDrinksTeaCup.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodDrinksTeaCup.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodDrinksTeaCup.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodBurger.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/FoodBurger.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodBurger.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodBurger.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodWaterMelon.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/FoodWaterMelon.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodWaterMelon.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodWaterMelon.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/FoodIceCream1.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/FoodIceCream1.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodIceCream1.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/FoodIceCream1.svg">
+              {% endif %}
+            </div>
+            <div class="chat-profile-add-cover">
+              <div class="chat-profile-add-background"></div>
+              <img src="../static/img/chat-page/profile-pic/InterfaceSettingMenuHorizontalCircle.svg" alt="" class="chat-profile-add-pic">
+              {% if userdb['chats'][currentchat]['img']=="../static/img/chat-page/profile-pic/InterfaceSettingMenuHorizontalCircle.svg"  %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceSettingMenuHorizontalCircle.svg" checked>
+              {% else %}
+              <input type="radio" class="chat-profile-add" name="chat-profile-setting" id="chat-profile-add" value="../static/img/chat-page/profile-pic/InterfaceSettingMenuHorizontalCircle.svg">
+              {% endif %}
+            </div>
+          </div>
+          <div class="right">
+            <span class="close-pop-up" id="close-pop-up" onclick="closeSetting()">Cancel</span>
+            <input type="submit" value="Confirm" class="confirm-add">
+            <input type="text" name="type" value="setting" class="hide">
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="pop-up-del-cover" id="pop-up-del-cover">
+        <div class="pop-up-del-background" id="pop-up-del-background" onclick="closeDelete()"></div>
+        <div class="pop-up-del" id="pop-up-del">
+          <div class="del-caution">Do you sure you want to delete this chat?<br> Once you delete,<br> you cannot recover any chat history.</div>
+          <div class="del-button-flex">
+            <div class="del-cancel" onclick="closeDelete()">Cancel</div>
+            <form action="" method="post">
+              <input type="number" name="index" value={{ currentchat }} id="" class="hide">
+              <input type="text" value="delete" name="type" class="hide">
+              <input type="submit" value="Delete" class="del-button" id="delete-button">            
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chats-command">
+        <a href={{ url_for('views.home') }} class="logo">
+          ctfu
+        </a>
+        <div class="add" id="add-button" onclick="openPopup()">+</div>
+      </div>
+      <div class="chats">
+        <ul>
+            {% for item in userdb['chats'] %}
+                <li>
+                    <div class="chat">
+                        <div class="chat-profile">
+                          <img src={{ item['img'] }} alt="">
+                        </div>
+                        <form action="" method="post">
+                          <input type="number" name="index" id="" value={{ userdb['chats'].index(item) }} class="hide">
+                          <input type="text" name="type" value="chat" class="hide">
+                        <input type="submit" value={{ item['name'] }} class="chat-name">
+                      </form>
+                      </div>
+                      <div class="underline"></div>
+                </li>
+                {% endfor %}
+        </ul>
+      </div>
+      <div class="chat-display">
+        <div class="chat-navi">
+          <div class="chat-profile">
+            <img src={{ userdb['chats'][currentchat]['img'] }} alt="">            
+          </div>
+          <div class="chat-name" id="chat-name">{{ userdb['chats'][currentchat]['name'] }}</div>
+          <img src="../static/img/chat-page/Setting.svg" class="chat-setting" onclick="openSetting()"></img>
+          <div class="chat-name" onclick="openDelete()" id="delete-button">-</div>
+        </div>
+        <ul>
+          {% for item in userdb['chats'][currentchat]['chat'] %}
+                    <li><div class="text">{{ item }}</div></li>
+                    {% endfor %}  
+        </ul>
+      </div>
+        <form class="chat-textfield" id="chat-textfield" action="" method="post" autocomplete="off" onsubmit="console.log('hello')">
+          <input type="text" autocomplete="false" class="hide">
+          <div class="background"></div>
+          <input class="textfield" type="text" name="text" id="textfield" maxlength="50" value="">
+          <input class="sent" type="submit" value="">
+          <input type="text" name="type" value="sent" class="hide">
+          <img class="send-inner" src="../static/img/chat-page/Sent.svg" alt="">
+        </form>
+    </div>
+  </body>
+</html>
